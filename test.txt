@@ -1,0 +1,26 @@
+#!/usr/bin/python3.7
+
+#sudo rtl_433 -f 433890000 -F json | /usr/bin/python3.7 key_out.py
+
+import json
+import RPi.GPIO as GPIO
+import sys
+import time
+
+GPIO.setmode(GPIO.BOARD)
+GPIO.setwarnings(False)
+GPIO.setup(18,GPIO.OUT)
+GPIO.setup(22,GPIO.OUT)
+GPIO.setup(32,GPIO.OUT)
+GPIO.setup(29,GPIO.OUT)
+
+def get_rtl_433_data():
+   for line in sys.stdin:
+      print(json.loads(line)
+      
+
+def main():
+   get_rtl_433_data()
+   
+if __name__ == "__main__":
+   main()
